@@ -4,4 +4,4 @@
 
 echo "Enter commit message:";
 read input;
-git add .; git commit -m "$input"; git push droplet;
+git add .; git commit -m "$input"; git push;
