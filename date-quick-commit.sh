@@ -1,2 +1,7 @@
+#!/usr/bin/env bash
+
 ./add-date.sh;
-quick-commit.sh.user;
+
+echo "Enter commit message:";
+read input;
+git add .; git commit -m "$input"; git push droplet;
