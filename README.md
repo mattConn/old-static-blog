@@ -4,9 +4,6 @@ My website where I keep favorite/useful links and write about things I discover 
 # root
 This is the web root for the server
 
-# add-date.sh
-Adds date of laste update to frontpage; to be replaced with CGI script.
-
 # add-bookmark.sh
 Appends bookmark name and url to bookmarks page.
 
