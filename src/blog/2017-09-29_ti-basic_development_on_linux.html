@@ -21,7 +21,7 @@
 	<li><p>For this compiler, the token for the <b>negation operator</b> (for negative numbers) is <code>[neg]</code> by default (found in "tokens.cpp" for tibasic-1.4.2 source), and not the typical dash (neither em-dash nor en-dash).</p></li>
 	<li><p>For testing with ASCII files:</p></li>
 		<ul>
-			<li><p>I use <a href="https://github.com/lunixbochs/pitybas">pitybas</a>. One issue with pitybas is that it doesn't recognize <code>[neg]</code> as the negation operator but uses a dash (the opposite of what the tibasic compiler wants). So your TI-BASIC will compile fine with the tibasic compiler and use of <code>[neg]</code>, but pitybas won't be able to parse it.</p></li>
+			<li><p>I use <a href="https://github.com/lunixbochs/pitybas">pitybas</a>. One issue with pitybas is that it doesn't recognize <code>[neg]</code> as the negation operator but uses a dash (the opposite of what the tibasic compiler wants). So your TI-BASIC will compile fine with the tibasic compiler and use of <code>[neg]</code>, but pitybas won't be able to parse it. This isn't breaking but not exactly convenient, and can be circumvented a few different ways. Still, pitybas is a nice .tib file interpreter written in python.</p></li>
 		</ul>
 	<li><p>For testing with compiled .8xp files:</p></li>
 		<ul>
