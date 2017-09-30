@@ -63,10 +63,6 @@
 			margin-bottom: 5px;
 		}
 
-		.topbar:hover .nav-dropdown{
-			visibility: hidden;
-		}
-
 		.more-links:hover .nav-dropdown {
 			visibility: visible;
 		}
@@ -74,6 +70,11 @@
 		nav li { display: inline-block;
 			margin-right: 1em;
 		}
+		
+		nav li:hover .nav-dropdown {
+			visibility: hidden;
+		}
+		
 		@media (max-width: 500px) {
 			nav li {
 				display: block;
