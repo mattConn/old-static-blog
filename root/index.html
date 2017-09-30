@@ -36,9 +36,38 @@
 		nav ul {
 			padding-left: 0;
 		}	
-		
-		nav li {
+
+		/*More links*/
+		.nav-arrow {
+			transform: rotate(180deg);
 			display: inline-block;
+			position: relative;
+			bottom: 2px;
+			margin-left: 5px;
+			z-index: -1;
+		}		
+		.more-links {
+			cursor: pointer;
+		}
+		.nav-dropdown {
+			visibility: hidden;
+			background-color: white;
+			border: solid 1px #eee;
+			border-top: none;
+			padding: 10px;
+			position: absolute;
+		}
+		
+		.nav-dropdown li {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		.more-links:hover .nav-dropdown {
+			visibility: visible;
+		}
+
+		nav li { display: inline-block;
 			margin-right: 1em;
 		}
 		@media (max-width: 500px) {
@@ -57,7 +86,30 @@
                 <li> <a href="/index.html">Frontpage</a></li>
                 <li> <a href="/blog.html">Blog</a></li>
                 <li> <a href="https://github.com/mattConn/">GitHub</a></li>
-                <li> <a href="/more_links.html">More Links</a></li>
+
+                <li class="more-links"> 
+					<a href="#">Development</a><span class="nav-arrow">^</span>
+					<div class="nav-dropdown">
+    					<ul>
+        					<li> <a href="http://git.mattconn.io/">GitHub Mirror</a></li>
+        					<li><a href="http://git.mattconn.io/dotfiles.git/">Dotfiles</a></li>
+        					<li><a href="http://git.mattconn.io/scripts-snippets.git/">Scripts/snippets</a></li>
+        					<li> <a href="/bookmarks.html">Bookmarks</a></li>
+						</ul>
+					</div>
+				</li>
+
+                <li class="more-links"> 
+					<a href="#">Social</a><span class="nav-arrow">^</span>
+					<div class="nav-dropdown">
+    					<ul>
+        					<li><a href="https://www.linkedin.com/in/matconn/">LinkedIn</a></li>
+        					<li><a href="https://codepen.io/mattConn/">Codepen</a></li>
+        					<li><a href="https://twitter.com/MatterialDesign">Twitter</a></li>
+						</ul>
+					</div>
+				</li>
+
             </ul>
         </nav>
     </div>
