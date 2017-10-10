@@ -20,10 +20,26 @@
 			margin: 0 auto;
 			color: #24292e;
 		}
-		
+
+		a {
+			/*color: #2e6a9e;*/
+			color: #24292e;
+			text-decoration: underline;
+		}		
+
 		h1 {
 			margin-bottom: 20px;
 		}		
+
+		.brand.home{
+			margin-bottom: 0;		
+		}
+
+		.brand.home a{
+			margin-bottom: 0;		
+			font-weight: initial;
+			text-decoration: none;
+		}
 
 		h2 {
 			margin-top: 38px;
@@ -87,6 +103,14 @@
 		nav li:hover .nav-dropdown {
 			visibility: hidden;
 		}
+
+		small {
+			color: #606060 !important;
+		}
+
+		hr {
+			border-top: solid 1px #cecece
+		}
 		
 		@media (max-width: 500px) {
 			nav li {
@@ -103,35 +127,14 @@
 <body>
 
     <div class="top-bar" data-topbar="" id="topbar">
-		<h1 class="brand"><a href="/index.html">MattConn.io</a></h1>
+		<h1 class="brand home"><a href="/index.html">MattConn.io</a></h1>
+		<p>Developer Page of Matthew Connelly</p>
         <nav>
             <ul class="right">
-                <li> <a href="/index.html">Frontpage</a></li>
+                <li> <a href="/index.html">About</a></li>
                 <li> <a href="/blog.html">Development Blog</a></li>
-                <li> <a href="https://github.com/mattConn/">GitHub</a></li>
+                <li> <a href="https://github.com/mattConn/" target="_blank">GitHub</a></li>
 
-                <li class="more-links"> 
-					<a href="#">Development Links</a><span class="nav-arrow">^</span>
-					<div class="nav-dropdown">
-    					<ul>
-        					<li> <a href="http://git.mattconn.io/">GitHub Mirror</a></li>
-        					<li><a href="http://git.mattconn.io/dotfiles.git/">Dotfiles</a></li>
-        					<li><a href="http://git.mattconn.io/scripts-snippets.git/">Scripts/snippets</a></li>
-        					<li> <a href="/bookmarks.html">Bookmarks</a></li>
-						</ul>
-					</div>
-				</li>
-
-                <li class="more-links"> 
-					<a href="#">Social Links</a><span class="nav-arrow">^</span>
-					<div class="nav-dropdown">
-    					<ul>
-        					<li><a href="https://www.linkedin.com/in/matconn/">LinkedIn</a></li>
-        					<li><a href="https://codepen.io/mattConn/">Codepen</a></li>
-        					<li><a href="https://twitter.com/MatterialDesign">Twitter</a></li>
-						</ul>
-					</div>
-				</li>
 
             </ul>
         </nav>
