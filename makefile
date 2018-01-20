@@ -7,7 +7,7 @@ blog: src/blog/*
 	$(BLOGCHECK) cd src/blog; for f in *.html; do ../../lib/finc $$f > ../../blog/$$f; done
 
 pages:
-	 sh pages.sh
+	cd src; for f in *.html; do ../lib/finc $$f > ../$$f; done;
 
 all: assets blog pages
 
