@@ -1,15 +1,15 @@
-ROOTCHECK = if [ ! -d root ]; then mkdir -p root/blog; fi;
+BLOGCHECK = if [ ! -d blog ]; then mkdir blog; fi;
 
 assets:
-	$(ROOTCHECK) cp -r src/assets root/;
+	 cp -r src/assets ./
 	
-blog:
-	$(ROOTCHECK) sh blog.sh
+blog: src/blog/*
+	$(BLOGCHECK) cd src/blog; for f in *.html; do ../../lib/finc $$f > ../../blog/$$f; done
 
 pages:
-	$(ROOTCHECK) sh pages.sh
+	cd src; for f in *.html; do ../lib/finc $$f > ../$$f; done;
 
 all: assets blog pages
 
 clean:
-	rm -rf root
+	rm -rf blog assets; rm *.html
