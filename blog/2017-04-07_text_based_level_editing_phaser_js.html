@@ -1,14 +1,142 @@
-<hr />
+<div>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>title: Game Development - Text-based Level Editing and Phaser JS
-layout: post
-description: >-
-  How I visually represent a level's layout through text (think ASCII art
-  or Nethack) and use the Phaser JS game engine to render it to a canvas.
-robots: none
-comments: true</p>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MattConn.io</title>
+    <link rel="icon" sizes="/assets/images/tux_favicon.ico" href="/assets/images/tux_favicon.ico">
+    <link rel="apple-touch-icon" sizes="assets/images/tux_favicon.ico" href="assets/images/tux_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+	<style type="text/css">
+		body {
+			background-color: white;
+			font-family: sans-serif;
+			/*font-family: times;*/
+			font-size: 18px;
+			padding: 0 20px;
+			max-width: 900px;
+			margin: 0 auto;
+			color: #24292e;
+		}
 
-<h2>published: true</h2>
+		a {
+			/*color: #2e6a9e;*/
+			color: #24292e;
+			text-decoration: underline;
+		}		
+
+		h1 {
+			margin-bottom: 20px;
+		}		
+
+		.brand.home a{
+			margin-bottom: 0;		
+			font-weight: initial;
+			text-decoration: none;
+		}
+
+		h2 {
+			margin-top: 38px;
+		}
+		
+		.brand a {
+			color: #24292e;
+		}
+		.brand:hover a {
+			text-decoration: none;
+		}
+
+		.post-short {
+			margin-bottom: 20px;
+		}
+
+		p {
+			margin-bottom: 15px;
+			line-height: 24px;
+		}
+
+		nav ul {
+			padding-left: 0;
+		}	
+
+		/*More links*/
+		.nav-arrow {
+			transform: rotate(180deg);
+			display: inline-block;
+			position: relative;
+			bottom: -1px;
+			margin-left: 5px;
+			z-index: -1;
+			color: #999;
+		}		
+		.more-links {
+			cursor: pointer;
+		}
+		.nav-dropdown {
+			visibility: hidden;
+			background-color: white;
+			border: solid 1px #eee;
+			border-top: none;
+			padding: 10px;
+			position: absolute;
+		}
+		
+		.nav-dropdown li {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		.more-links:hover .nav-dropdown {
+			visibility: visible;
+		}
+
+		nav li { display: inline-block;
+			margin-right: 1em;
+		}
+		
+		nav li:hover .nav-dropdown {
+			visibility: hidden;
+		}
+
+		small {
+			color: #606060 !important;
+		}
+
+		hr {
+			border-top: solid 1px #cecece
+		}
+		
+		@media (max-width: 500px) {
+			nav li {
+				display: block;
+				font-size: 20px;
+			}
+			.nav-dropdown {
+				right: 0;
+				border-top: solid 1px #eee;
+			}
+		}
+	</style>
+</head>
+<body>
+
+    <div class="top-bar" data-topbar="" id="topbar">
+		<h1 class="brand home"><a href="/index.html">Matthew Connelly's Developer Page</a></h1>
+        <nav>
+            <ul class="right">
+                <li> <a href="/index.html">About</a></li>
+                <li> <a href="/blog.html">Blog</a></li>
+                <li> <a href="https://github.com/mattConn/" target="_blank">GitHub</a></li>
+
+
+            </ul>
+        </nav>
+    </div>
+<hr>
+</div>
 
 <p><style>
     .room-array {
@@ -112,3 +240,23 @@ level1 [
     ]
 ]
 </code></p>
+
+<div>
+    <div class="row">
+        <div class="column">
+            <hr>
+        </div>
+        <footer>
+		<small>
+			<p><a href="/blog.html">&lt; Back to blog</a>
+			<p>Comments: mattconndev [at] gmail [dot] com</p>	
+           <span style="display: inline-block; text-align: right; margin: 0px; -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: “FlipH”;">&copy;</span>
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> Matthew Connelly</p>
+		</small>
+        </footer>
+    </div>
+</body>
+</html>
+</div>

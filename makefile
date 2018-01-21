@@ -5,6 +5,7 @@ PP-MD = markdown
 assets:
 	 cp -r src/assets ./
 	
+# process markdown, then include files
 blog: src/blog/*
 	mkdir src/tmp;\
 	$(BLOGCHECK)\
