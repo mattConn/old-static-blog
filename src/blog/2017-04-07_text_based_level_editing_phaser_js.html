@@ -11,6 +11,7 @@
 	}
 </style>
 
+# Game Development – Text-based Level Editing and Phaser JS
 
 If you are familiar with roguelikes (turn-based dungeon crawlers) such as Nethack, then you are no doubt familiar with the idea of a game's elements being displayed entirely as ASCII characters.  
 
@@ -75,7 +76,8 @@ So using the room layout above, `level1[0][8].charAt(4)` would match a case of `
 ### The room-rendering function (abridged)
 (To be called on collision.)
 
-```
+<pre>
+<code>
 function renderRoom(room){
     for(var row in room){
         for(var column=0; column <=  room[row].length; column++){
@@ -87,12 +89,15 @@ function renderRoom(room){
         }
     }
 }
-```  
+</code>
+</pre>
+
 This room-rendering function currently only works with one level but should scale to accommodate multiple levels and work similarly if not identically. 
 
 The room system works as detailed in pseudo-code below, with each "column" actually representing a single character in a string:  
 
-```
+<pre>
+<code>
 level1 [
 	room1 [ 
 		row1 'column1 column2 column3',
@@ -105,7 +110,8 @@ level1 [
 		row3 'column1 column2 column3'
 	]
 ]
-```
+</pre>
+</code>
 
 <div>
 #include ../includes/blog/footer.html
