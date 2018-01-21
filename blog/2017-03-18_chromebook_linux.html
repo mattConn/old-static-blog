@@ -1,170 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<hr />
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MattConn.io</title>
-    <link rel="icon" sizes="/assets/images/tux_favicon.ico" href="/assets/images/tux_favicon.ico">
-    <link rel="apple-touch-icon" sizes="assets/images/tux_favicon.ico" href="assets/images/tux_favicon.ico">
-	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
-	<style type="text/css">
-		body {
-			background-color: white;
-			font-family: sans-serif;
-			/*font-family: times;*/
-			font-size: 18px;
-			padding: 0 20px;
-			max-width: 900px;
-			margin: 0 auto;
-			color: #24292e;
-		}
+<p>title: Chromebook Linux - From Crouton to GalliumOS
+layout: post
+description: How I finally got to use my Chromebook as a full-featured Linux machine.
+robots: none
+comments: true</p>
 
-		a {
-			/*color: #2e6a9e;*/
-			color: #24292e;
-			text-decoration: underline;
-		}		
+<h2>published: true</h2>
 
-		h1 {
-			margin-bottom: 20px;
-		}		
+<p>I love my Chromebook (as evidenced in <a href="http://{{ site.noita.domain }}/blog/2016/chromebook-web-development/">this</a> post); I bring it everywhere as it comes in handy for long commutes and, weighing in at around 3 pounds, isn't the least bit cumbersome.  </p>
 
-		.brand.home a{
-			margin-bottom: 0;		
-			font-weight: initial;
-			text-decoration: none;
-		}
+<p>However, the restrictions ChromeOS placed on me had been noticeable since the beginning; and I knew I would be restricted to Chrome Apps, extensions, and Play store applications, but didn't count on how annoying this restriction would wind up being. Fortunately, there were workarounds.  </p>
 
-		h2 {
-			margin-top: 38px;
-		}
-		
-		.brand a {
-			color: #24292e;
-		}
-		.brand:hover a {
-			text-decoration: none;
-		}
+<h2>Crouton: An Early Solution</h2>
 
-		.post-short {
-			margin-bottom: 20px;
-		}
-
-		p {
-			margin-bottom: 15px;
-			line-height: 24px;
-		}
-
-		nav ul {
-			padding-left: 0;
-		}	
-
-		/*More links*/
-		.nav-arrow {
-			transform: rotate(180deg);
-			display: inline-block;
-			position: relative;
-			bottom: -1px;
-			margin-left: 5px;
-			z-index: -1;
-			color: #999;
-		}		
-		.more-links {
-			cursor: pointer;
-		}
-		.nav-dropdown {
-			visibility: hidden;
-			background-color: white;
-			border: solid 1px #eee;
-			border-top: none;
-			padding: 10px;
-			position: absolute;
-		}
-		
-		.nav-dropdown li {
-			display: block;
-			margin-bottom: 5px;
-		}
-
-		.more-links:hover .nav-dropdown {
-			visibility: visible;
-		}
-
-		nav li { display: inline-block;
-			margin-right: 1em;
-		}
-		
-		nav li:hover .nav-dropdown {
-			visibility: hidden;
-		}
-
-		small {
-			color: #606060 !important;
-		}
-
-		hr {
-			border-top: solid 1px #cecece
-		}
-		
-		@media (max-width: 500px) {
-			nav li {
-				display: block;
-				font-size: 20px;
-			}
-			.nav-dropdown {
-				right: 0;
-				border-top: solid 1px #eee;
-			}
-		}
-	</style>
-</head>
-<body>
-
-    <div class="top-bar" data-topbar="" id="topbar">
-		<h1 class="brand home"><a href="/index.html">Matthew Connelly's Developer Page</a></h1>
-        <nav>
-            <ul class="right">
-                <li> <a href="/index.html">About</a></li>
-                <li> <a href="/blog.html">Blog</a></li>
-                <li> <a href="https://github.com/mattConn/" target="_blank">GitHub</a></li>
-
-
-            </ul>
-        </nav>
-    </div>
-<hr>
-
-
-<h1>Chromebook Linux - From Crouton to GalliumOS</h1>
-<h2>How I finally got to use my Chromebook as a full-featured Linux machine.</h2>
-<p>I love my Chromebook; I bring it everywhere as it comes in handy for long commutes and, weighing in at around 3 pounds, isn't the least bit cumbersome.  </p>
-<p>However, the restrictions ChromeOS placed on me had been noticeable since the beginning; and I knew I would be restricted to Chrome Apps, extensions, and Play store applications, but didn&#39;t count on how annoying this restriction would wind up being. Fortunately, there were workarounds.  </p>
-<h2 id="crouton-an-early-solution">Crouton: An Early Solution</h2>
 <p><a href="https://github.com/dnschneid/crouton">Crouton</a> proved to be very easy to install and useful from the start. By creating a chroot and installing my distro of choice in it, I could run Ubuntu either by switching over to the chroot or accessing it from the Crosh command line.  </p>
-<p>There was a problem, however; Ubuntu didn&#39;t have the greatest driver support for my Chromebook&#39;s trackpad and keyboard. So I found myself running Linux programs from the command line that ChromeOS typically wouldn&#39;t allow (such as PHP, Python, and naturally, apt-get), but actually working in the ChromeOS environment, as it was just that much more supportive of the machine (Samsung Chromebook 3).  </p>
-<p>But now if I wanted to play a game in an emulator such as Mupen64plus or WINE, I could not run that from the command line while in ChromeOS; it would throw an error in regards to X-server, forcing me to switch over to the chroot just for one program.  </p>
-<h2 id="galliumos-my-current-and-best-so-far-solution">GalliumOS: My Current (And Best, So Far) Solution</h2>
-<p>Finally I thought I would consider <a href="https://galliumos.org/">GalliumOS</a>; a distro made specifically for Chromebooks. I made a ChromeOS recovery image and made a GalliumOS bootable USB and gave it a try.  </p>
-<p>It worked nicely; it was a complete Linux environment that supported my machine&#39;s brightness and volume keys, and with better &quot;palm detection&quot; (think Macbook trackpads and your resting thumb) out of the box without messing about with Synaptics.  </p>
-<p>Initially, there was no sound support for my model. This stopped from installing it for a bit, but after trying a few other options, one including running a chroot off an SD card (for extra space for packages; it gets ejected when the machine sleeps unfortunately), I figured I&#39;d deal with the sound issue. (At the time, the bug was that no internal sound was supported, but Bluetooth sound was.)  </p>
-<p>After a full install, made easy thanks to GalliumOS&#39;s excellent documentation, and then finally a GalliumOS update, to my surprise, internal audio worked, and so I&#39;m now using my Chromebook as I please, with the ability to install my favorite programs such as Visual Studio Code (a program I wanted on my Chromebook from the very start), WINE, and all the rest; with that update came the patch that fixed my model&#39;s sound issue.  </p>
 
-    <div class="row">
-        <div class="column">
-            <hr>
-        </div>
-        <footer>
-		<small>
-			<p><a href="/blog.html">&lt; Back to blog</a>
-			<p>Comments: mattconndev [at] gmail [dot] com</p>	
-           <span style="display: inline-block; text-align: right; margin: 0px; -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: “FlipH”;">&copy;</span>
-                <script>
-                    document.write(new Date().getFullYear())
-                </script> Matthew Connelly</p>
-		</small>
-        </footer>
-    </div>
-</body>
-</html>
+<p>There was a problem, however; Ubuntu didn't have the greatest driver support for my Chromebook's trackpad and keyboard. So I found myself running Linux programs from the command line that ChromeOS typically wouldn't allow (such as PHP, Python, and naturally, apt-get), but actually working in the ChromeOS environment, as it was just that much more supportive of the machine (Samsung Chromebook 3).  </p>
+
+<p>But now if I wanted to play a game in an emulator such as Mupen64plus or WINE, I could not run that from the command line while in ChromeOS; it would throw an error in regards to X-server, forcing me to switch over to the chroot just for one program.  </p>
+
+<h2>GalliumOS: My Current (And Best, So Far) Solution</h2>
+
+<p>Finally I thought I would consider <a href="https://galliumos.org/">GalliumOS</a>; a distro made specifically for Chromebooks. I made a ChromeOS recovery image and made a GalliumOS bootable USB and gave it a try.  </p>
+
+<p>It worked nicely; it was a complete Linux environment that supported my machine's brightness and volume keys, and with better "palm detection" (think Macbook trackpads and your resting thumb) out of the box without messing about with Synaptics.  </p>
+
+<p>Initially, there was no sound support for my model. This stopped from installing it for a bit, but after trying a few other options, one including running a chroot off an SD card (for extra space for packages; it gets ejected when the machine sleeps unfortunately), I figured I'd deal with the sound issue. (At the time, the bug was that no internal sound was supported, but Bluetooth sound was.)  </p>
+
+<p>After a full install, made easy thanks to GalliumOS's excellent documentation, and then finally a GalliumOS update, to my surprise, internal audio worked, and so I'm now using my Chromebook as I please, with the ability to install my favorite programs such as Visual Studio Code (a program I wanted on my Chromebook from the very start), WINE, and all the rest; with that update came the patch that fixed my model's sound issue.  </p>
+
+<p>As I find myself installing and re-installing Linux pretty often, as with the example of setting up chroots mentioned earlier, I began tracking my environment's packages, as well as Visual Studio Code extensions, which you can check out in a repository <a href="https://github.com/mattConn/ubuntu-environment-setup">here</a>.</p>
