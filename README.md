@@ -16,8 +16,8 @@ Appends bookmark name and url to bookmarks page.
 ## lib
 Binaries used for building.
 
-## assets, blog
-Assets (images, stylsheets) are served from here, and blog is where blog posts are served from and are linked to on `blog.html`.
+## assets, blog, \*.html
+Assets (images, stylsheets) are served from here, and blog is where blog posts are served from and are linked to on `blog.html`. Any HTML files are already processed and being served.
 
 I may also keep useful files in the top-level directory for my own use.
 
