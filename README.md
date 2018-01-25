@@ -8,26 +8,26 @@ Running `make all` will build all pages. Requires markdown and a small preproces
 
 # Folder Structure
 
-## Top-level Directory (webroot)
+# Top-level Directory (webroot)
 
-### add-bookmark.sh
+## add-bookmark.sh
 Appends bookmark name and url to bookmarks page.
 
-### lib
+## lib
 Binaries used for building.
 
-### assets, blog
+## assets, blog
 Assets (images, stylsheets) are served from here, and blog is where blog posts are served from and are linked to on `blog.html`.
 
 I may also keep useful files in the top-level directory for my own use.
 
-## src (development)
+# src (development)
 
-### blog
+## blog
 All blog posts.
 
-### includes
+## includes
 Partials to be included throughout site (i.e. head, footer), as well as partials intended for specific pages.
 
-### pages
+## pages
 All pages for this website (excluding blog posts).
