@@ -1,5 +1,7 @@
 #!usr/bin/env bash
 
+# quick apt-get install script
+
 sudo apt-get update;
 sudo apt-get install \
 vim \

@@ -1,16 +1,15 @@
 # Developer Page
 My website where I keep favorite/useful links and write about things I discover during development.
 
-# root
-This is the web root for the server
+The top-level directory of this repo is the web root, as required by GitHub Pages. The development directory is `src`.
 
-# add-bookmark.sh
+# Building
+Running `make all` will build all pages. Requires markdown program, and my own "file-includer" (something of a toy preprocessor) find, which is 
+
+# Folder Structure
+
+## add-bookmark.sh
 Appends bookmark name and url to bookmarks page.
 
-# root/includes
-Partials to be included throughout site via server-side include.
-
-## TODO:
-Refine blog post setup; static listing not managable enough.  
-Refine bookmarks; order from last-added to oldest.  
-Add CGI script to add update dates on update.
+## src/includes
+Partials to be included throughout site (i.e. head, footer).
