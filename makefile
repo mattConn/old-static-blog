@@ -13,6 +13,7 @@ assets:
 blog: src/blog/* src/includes/blog/*
 	$(TMPCHECK)\
 	$(BLOGCHECK)\
+	rm blog/*;\
 	cd src/blog;\
 	for f in *.html; do $(PP-MD) $$f > ../tmp/$$f; done;\
 	cd ../tmp;\
@@ -23,8 +24,9 @@ blog: src/blog/* src/includes/blog/*
 	cd ..; rm -rf tmp
 
 # second for loop: processes nested directives in includes
-pages:
+pages: src/pages/*
 	$(TMPCHECK)\
+	rm *.html;\
 	cd src/pages;\
 	for f in *.html; do $(PP-MD) $$f > ../tmp/$$f; done;\
 	cd ../tmp;\
