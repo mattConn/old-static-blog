@@ -23,6 +23,9 @@ I may also keep useful files in the top-level directory for my own use.
 
 # src (development)
 
+## assets
+Assets (images, stylesheets) are kept here, and are currently only copied over to top-level directory to be served (no further processing).
+
 ## blog
 All blog posts.
 
