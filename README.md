@@ -4,12 +4,30 @@ My website where I keep favorite/useful links and write about things I discover 
 The top-level directory of this repo is the web root, as required by GitHub Pages. The development directory is `src`.
 
 # Building
-Running `make all` will build all pages. Requires markdown program, and my own "file-includer" (something of a toy preprocessor) find, which is 
+Running `make all` will build all pages. Requires markdown and a small preprocessor I wrote (found in `lib`) for file inclusion and inline code execution.
 
 # Folder Structure
 
-## add-bookmark.sh
+## Top-level Directory (webroot)
+
+### add-bookmark.sh
 Appends bookmark name and url to bookmarks page.
 
-## src/includes
-Partials to be included throughout site (i.e. head, footer).
+### lib
+Binaries used for building.
+
+### assets, blog
+Assets (images, stylsheets) are served from here, and blog is where blog posts are served from and are linked to on `blog.html`.
+
+I may also keep useful files in the top-level directory for my own use.
+
+## src (development)
+
+### blog
+All blog posts.
+
+### includes
+Partials to be included throughout site (i.e. head, footer), as well as partials intended for specific pages.
+
+### pages
+All pages for this website (excluding blog posts).
