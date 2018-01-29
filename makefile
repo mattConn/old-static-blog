@@ -10,7 +10,7 @@ PP = $(ROOT_DIR)/lib/preprocessor
 PP-MD = markdown
 
 assets:
-	 cp -r src/assets ./
+	 $(DISTCHECK) cp -r src/assets dist
 	
 # For "blog" and "pages" tasks:
 # process markdown,
@@ -33,18 +33,19 @@ blog: src/blog/* src/includes/blog/*
 
 # second for loop: processes nested directives in includes
 pages: src/pages/*
+	$(DISTCHECK)\
 	$(TMPCHECK)\
-	rm *.html;\
+	rm dist/*.html;\
 	cd src/pages;\
-	for f in *.html; do $(PP-MD) $$f > ../tmp/$$f; done;\
-	cd ../tmp;\
+	for f in *.html; do $(PP-MD) $$f > $(TMP)/$$f; done;\
+	cd $(TMP);\
 	sed -i 's/<div>//g' *.html;\
-	for f in *.html; do ../../$(PP) $$f > ./$$f.tmp; done;\
-	for f in *.tmp; do ../../$(PP) $$f > ../../$$f; done;\
-	cd ../..; rename 's/.tmp//g' *;
-	rm -rf src/tmp
+	for f in *.html; do $(PP) $$f > ./$$f.tmp; done;\
+	for f in *.tmp; do $(PP) $$f > $(DIST)/$$f; done;\
+	cd $(DIST); rename 's/.tmp//g' *;
+	rm -rf $(TMP)
 
 all: assets blog pages
 
 clean:
-	rm -rf blog assets; rm *.html
+	rm -r dist
