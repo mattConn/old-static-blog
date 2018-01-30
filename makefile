@@ -45,7 +45,10 @@ pages: src/pages/*
 	cd $(DIST); rename 's/.tmp//g' *;
 	rm -rf $(TMP)
 
-all: assets blog pages
+webroot:
+	cp webroot-needs/* dist;
+
+all: assets blog pages webroot
 
 clean:
 	rm -r dist
