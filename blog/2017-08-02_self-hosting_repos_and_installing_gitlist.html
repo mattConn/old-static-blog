@@ -1,12 +1,55 @@
-<div>
-#include ../includes/head.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79240358-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-79240358-1');
+</script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MattConn.io</title>
+    <link rel="icon" sizes="/assets/images/tux_favicon.ico" href="/assets/images/tux_favicon.ico">
+    <link rel="apple-touch-icon" sizes="assets/images/tux_favicon.ico" href="assets/images/tux_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+
+    <div class="top-bar" data-topbar="" id="topbar">
+		<h1 class="brand home"><a href="/index.html">Matthew Connelly's Developer Page</a></h1>
+        <nav>
+            <ul class="right">
+                <li> <a href="/index.html">About</a></li>
+                <li> <a href="/blog.html">Blog</a></li>
+                <li> <a href="https://github.com/mattConn/" target="_blank">GitHub</a></li>
+
+
+            </ul>
+        </nav>
+    </div>
+<hr>
 </div>
 
 <h1>Self-Hosting Git Repos and Installing GitList for a Web Interface</h1>
-<img src="/assets/images/blog/git_logo.png" alt="Git logo" style="margin-bottom: 20px">
+
+<p><img src="/assets/images/blog/git_logo.png" alt="Git logo" style="margin-bottom: 20px"></p>
+
 <p>Hosting your git repositories yourself is as simple as <code>git init --bare</code> (or <code>git clone --bare</code> for existing repos) in a directory on your server, and then adding the remote to your local repo: <code>git remote add myServer ssh://me@server.address/path/to/repo/project.git</code>.  </p>
+
 <p>Having your repos on GitHub too makes for a nice redundancy (or on any other git server), and a remote on your server, on GitHub and a local copy makes for three redundancies. You can push to multiple remotes by adding a few lines in your project's git config.</p>
+
 <p>In your local copy of the repo, edit <code>.git/config</code> and add a new block:</p>
+
 <pre><code>[remote "all"]
     url = ssh://me@server.address/path/to/repo/project.git
     url = git@github.com:me/project
@@ -26,8 +69,29 @@
 <p>This error persisted for a bit longer than the above for me, but looking at the error log (always check the error log!), I noticed this:</p>
 <pre><code>FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'SimpleXmlIterator' not found in /var/www/gitlist/vendor/klaussilveira/gitter/lib/Gitter/PrettyFormat.php:22
 </code></pre>
+
 <p>Searching for <code>'SimpleXmlIterator' not found</code> online lead me to find that I needed to install <code>php7.0-xml</code>, which I was able to do with apt-get, which solved the issue.</p>
 
-<div>
-#include ../includes/blog/footer.html
+
+<div class="row">
+<hr>
+<footer>
+		<small>
+			<p><a href="/blog.html">&lt; Back to blog</a></p>
+
+			<p>
+This page last generated: Tue Jan 30 01:25:49 EST 2018
+			</p>
+		   <p>
+			<span class="copyleft-icon">&copy;</span>
+			<script>
+					document.write(new Date().getFullYear())
+			</script> Matthew Connelly</p>
+			</p>
+		</small>
+</footer>
+</div>
+
+</body>
+</html>
 </div>
