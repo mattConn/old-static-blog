@@ -1,16 +1,16 @@
-DISTCHECK = if [ ! -d docs ]; then mkdir docs; fi;
-BLOGCHECK = if [ ! -d docs/blog ]; then mkdir docs/blog; fi;
+DISTCHECK = if [ ! -d dist ]; then mkdir dist; fi;
+BLOGCHECK = if [ ! -d dist/blog ]; then mkdir dist/blog; fi;
 TMPCHECK = if [ ! -d src/tmp ]; then mkdir src/tmp; fi;
 
 ROOT_DIR = $(CURDIR)
 TMP = $(ROOT_DIR)/src/tmp
-DIST = $(ROOT_DIR)/docs
+DIST = $(ROOT_DIR)/dist
 
 PP = $(ROOT_DIR)/lib/preprocessor
 PP-MD = markdown
 
 assets:
-	 $(DISTCHECK) cp -r src/assets docs
+	 $(DISTCHECK) cp -r src/assets dist
 	
 # For "blog" and "pages" tasks:
 # process markdown,
@@ -20,7 +20,7 @@ blog: src/blog/* src/includes/blog/*
 	$(DISTCHECK)\
 	$(TMPCHECK)\
 	$(BLOGCHECK)\
-	rm docs/blog/*;\
+	rm dist/blog/*;\
 	cd src/blog;\
 	for f in *.html; do $(PP-MD) $$f > $(TMP)/$$f; done;\
 	cd $(TMP);\
@@ -35,7 +35,7 @@ blog: src/blog/* src/includes/blog/*
 pages: src/pages/*
 	$(DISTCHECK)\
 	$(TMPCHECK)\
-	rm docs/*.html;\
+	rm dist/*.html;\
 	cd src/pages;\
 	for f in *.html; do $(PP-MD) $$f > $(TMP)/$$f; done;\
 	cd $(TMP);\
@@ -48,4 +48,4 @@ pages: src/pages/*
 all: assets blog pages
 
 clean:
-	rm -r docs
+	rm -r dist
