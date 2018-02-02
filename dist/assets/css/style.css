@@ -41,8 +41,8 @@ h2 {
 }
 
 p {
-	margin-bottom: 15px;
-	line-height: 24px;
+	margin: 0.8em 0;
+	line-height: 1.8em;
 }
 
 nav ul {
