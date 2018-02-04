@@ -68,15 +68,13 @@
 <p>To enable parsing of PHP in HTML files, editing a server block's location block to include files with an HTML extension should be sufficient. <br />
 For example:  </p>
 
-<p>```</p>
-
-<h1>/etc/nginx/sites-available/mywebsite.com</h1>
-
-<p>location ~ .(php|html)$ {
+<pre><code>
+# /etc/nginx/sites-available/mywebsite.com
+location ~ \.(php|html)$ {
         include snippets/fastcgi-php.conf;
         fastcgi_pass unix:/run/php/php7.0-fpm.sock;
 }
-```  </p>
+</code></pre>
 
 <p>However, since I am working with PHP 7, whose full name is "php7.0" (which is usefully descriptive but makes things tricky when initially looking for related directories or daemons), I had an extra step in order to make this work. And apparently, all PHP versions, from late php5.* to php7.0, will require this extra step.</p>
 
@@ -111,7 +109,7 @@ For me, <code>php-fpm.conf</code> lives at <code>/etc/php/7.0/</code>, with <cod
 			<p><a href="/blog.html">&lt; Back to blog</a></p>
 
 			<p>
-This page last generated: Thu Feb 1 17:16:47 EST 2018
+This page last generated: Sat Feb 3 20:26:47 EST 2018
 			</p>
 		   <p>
 			<span class="copyleft-icon">&copy;</span>
