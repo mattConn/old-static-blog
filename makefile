@@ -37,11 +37,9 @@ pages: src/pages/*
 	$(TMPCHECK)\
 	rm dist/*.html;\
 	cd src/pages;\
-	for f in *.html; do $(PP-MD) $$f > $(TMP)/$$f; done;\
-	cd $(TMP);\
-	sed -i 's/<div>//g' *.html;\
 	for f in *.html; do $(PP) $$f > ./$$f.tmp; done;\
 	for f in *.tmp; do $(PP) $$f > $(DIST)/$$f; done;\
+	rm *.tmp;
 	cd $(DIST); rename 's/.tmp//g' *;
 	rm -rf $(TMP)
 

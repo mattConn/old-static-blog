@@ -49,6 +49,14 @@ nav ul {
 	padding-left: 0;
 }	
 
+.blog-post-list li {
+	margin: 0.8em 0;
+}
+
+.blog-post-list small {
+	margin-left: 0.6em;
+}
+
 /*More links*/
 .nav-arrow {
 	transform: rotate(180deg);
